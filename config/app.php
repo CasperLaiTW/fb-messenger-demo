@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Casperlaitw\LaravelFbMessenger\LaravelFbMessengerServiceProvider::class,
 
         /*
          * Application Service Providers...
