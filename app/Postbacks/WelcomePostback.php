@@ -33,12 +33,22 @@ class WelcomePostback extends PostbackHandler
         $user = $this->send(new User($senderId));
         $this->send(new Text($senderId, "Hi, {$user['first_name']}"));
 
+        // Show template
+        $this->send($this->createMainMenu($senderId));
+    }
+
+    /**
+     * @param $senderId
+     * @return ButtonTemplate
+     */
+    public function createMainMenu($senderId)
+    {
         // Make button template
         $template = new ButtonTemplate($senderId, 'Product List');
         $template->addPostBackButton('Product 1', 'BUY_PRODUCT_1');
         $template->addPostBackButton('Product 2', 'BUY_PRODUCT_2');
         $template->addPostBackButton('Product 3', 'BUY_PRODUCT_3');
 
-        $this->send($template);
+        return $template;
     }
 }

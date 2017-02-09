@@ -1,4 +1,5 @@
 <?php
+use App\Handlers\ShowProductMenuHandler;
 use App\Postbacks\BuyProductPostback;
 use App\Postbacks\CanceledProductPostback;
 use App\Postbacks\ConfirmedProductPostback;
@@ -10,7 +11,7 @@ return [
     'app_token' => env('MESSENGER_APP_TOKEN'),
     'auto_typing' => true,
     'handlers' => [
-        Casperlaitw\LaravelFbMessenger\Contracts\DefaultHandler::class
+        ShowProductMenuHandler::class,
     ],
     'custom_url' => '/webhook',
     'postbacks' => [
