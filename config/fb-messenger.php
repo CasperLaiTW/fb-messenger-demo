@@ -1,4 +1,6 @@
 <?php
+use App\Postbacks\WelcomePostback;
+
 return [
     'debug' => env('APP_DEBUG', false),
     'verify_token' => env('MESSENGER_VERIFY_TOKEN'),
@@ -8,5 +10,7 @@ return [
         Casperlaitw\LaravelFbMessenger\Contracts\DefaultHandler::class
     ],
     'custom_url' => '/webhook',
-    'postbacks' => [],
+    'postbacks' => [
+        WelcomePostback::class,
+    ],
 ];
