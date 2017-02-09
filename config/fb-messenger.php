@@ -1,4 +1,5 @@
 <?php
+use App\Postbacks\BuyProductPostback;
 use App\Postbacks\WelcomePostback;
 
 return [
@@ -12,5 +13,6 @@ return [
     'custom_url' => '/webhook',
     'postbacks' => [
         WelcomePostback::class,
+        BuyProductPostback::class,
     ],
 ];
