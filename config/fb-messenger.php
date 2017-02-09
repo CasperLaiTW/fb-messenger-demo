@@ -1,5 +1,7 @@
 <?php
 use App\Postbacks\BuyProductPostback;
+use App\Postbacks\CanceledProductPostback;
+use App\Postbacks\ConfirmedProductPostback;
 use App\Postbacks\WelcomePostback;
 
 return [
@@ -14,5 +16,7 @@ return [
     'postbacks' => [
         WelcomePostback::class,
         BuyProductPostback::class,
+        ConfirmedProductPostback::class,
+        CanceledProductPostback::class,
     ],
 ];
